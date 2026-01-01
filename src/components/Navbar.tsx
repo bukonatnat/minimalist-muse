@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -38,12 +39,15 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a
-          href="#connect"
-          className="btn-outline text-xs animate-fade-in delay-600"
-        >
-          Get in Touch
-        </a>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <a
+            href="#connect"
+            className="btn-outline text-xs animate-fade-in delay-600 hidden sm:inline-flex"
+          >
+            Get in Touch
+          </a>
+        </div>
       </div>
     </nav>
   );
